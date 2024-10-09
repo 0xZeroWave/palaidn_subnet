@@ -462,6 +462,10 @@ class PalaidnMiner(BaseNeuron):
                 url = f"https://eth-mainnet.g.alchemy.com/v2/{self.alchemy_api_key}"
             elif network['name'] == 'polygon':
                 url = f"https://polygon-mainnet.g.alchemy.com/v2/{self.alchemy_api_key}"
+            elif network['name'] == 'arbitrum':
+                url = f"https://arb-mainnet.g.alchemy.com/v2/{self.alchemy_api_key}"
+            elif network['name'] == 'optimism':
+                url = f"https://opt-mainnet.g.alchemy.com/v2/{self.alchemy_api_key}"
             else:
                 bt.logging.error(f"Unsupported network: {network['name']}")
                 continue

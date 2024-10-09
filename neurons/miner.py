@@ -108,12 +108,12 @@ def main(miner: PalaidnMiner):
     while True:
         try:
             # Below: Periodically update our knowledge of the network graph.
-            if miner.step % 20 == 0:
+            if miner.step % 10 == 0:
                 # if miner.step % 300 == 0:
                 # Check if the miners hotkey is on the remote blacklist
                 # miner.check_remote_blacklist()
 
-                if miner.step % 600 == 0:
+                if miner.step % 300 == 0:
                     bt.logging.debug(
                         f"Syncing metagraph: {miner.metagraph} with subtensor: {miner.subtensor}"
                     )
